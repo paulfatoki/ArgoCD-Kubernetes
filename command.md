@@ -19,3 +19,5 @@ kubectl get svc -n argocd
 argocd-server port fowarding 
 to get password - kubectl -n argocd get secret argocd-initial-admin-secret -o yaml or
 kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d
+to create another pod - kubectl run web1  --image=nginx --dry-run=client -o yaml > pod.yaml
+to create a pod kubectl apply -f pod.yaml
